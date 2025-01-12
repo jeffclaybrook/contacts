@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import EditContact from "@/components/edit-contact"
 
-export async function getContactById(id: string) {
+async function getContactById(id: string) {
  try {
   const res = await fetch(`http://localhost:3000/api/contacts/${id}`, {
    cache: "no-store"

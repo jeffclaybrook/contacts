@@ -4,7 +4,7 @@ import { Pencil } from "lucide-react"
 
 const headers = ["Name", "Email", "Phone", "Action"]
 
-export async function getContacts() {
+async function getContacts() {
  try {
   const res = await fetch("http://localhost:3000/api/contacts", {
    cache: "no-store"
