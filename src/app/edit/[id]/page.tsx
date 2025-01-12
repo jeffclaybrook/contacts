@@ -3,7 +3,7 @@ import EditContact from "@/components/edit-contact"
 
 async function getContactById(id: string) {
  try {
-  const res = await fetch(`/api/contacts/${id}`, {
+  const res = await fetch(`https://contacts-mmz4xn875-jeffs-projects-2f8cb560.vercel.app/api/contacts/${id}`, {
    cache: "no-store"
   })
 

@@ -18,7 +18,7 @@ export default function CreateContact() {
   }
 
   try {
-   const res = await fetch("/api/contacts/", {
+   const res = await fetch("https://contacts-mmz4xn875-jeffs-projects-2f8cb560.vercel.app/api/contacts/", {
     method: "POST",
     headers: {
      "Content-Type": "application/json"

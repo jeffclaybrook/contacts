@@ -6,7 +6,7 @@ const headers = ["Name", "Email", "Phone", "Action"]
 
 async function getContacts() {
  try {
-  const res = await fetch("/api/contacts", {
+  const res = await fetch("https://contacts-mmz4xn875-jeffs-projects-2f8cb560.vercel.app/api/contacts", {
    cache: "no-store"
   })
 
