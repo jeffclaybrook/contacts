@@ -27,7 +27,7 @@ export default function EditContact({
   e.preventDefault()
 
   try {
-   const res = await fetch(`https://contacts-mmz4xn875-jeffs-projects-2f8cb560.vercel.app/api/contacts/${id}`, {
+   const res = await fetch(`https://contacts-eosin-two.vercel.app/api/contacts/${id}`, {
     method: "PUT",
     headers: {
      "Content-Type": "application/json"

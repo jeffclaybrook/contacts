@@ -10,7 +10,7 @@ export default function DeleteButton({ id }: { id: string }) {
   const confirmed = confirm("Are you sure you want to delete this contact?")
 
   if (confirmed) {
-   const res = await fetch(`https://contacts-mmz4xn875-jeffs-projects-2f8cb560.vercel.app/api/contacts?id=${id}`, {
+   const res = await fetch(`https://contacts-eosin-two.vercel.app/api/contacts?id=${id}`, {
     method: "DELETE"
    })
 
