@@ -6,7 +6,7 @@ const headers = ["Name", "Email", "Phone", "Action"]
 
 async function getContacts() {
  try {
-  const res = await fetch("http://localhost:3000/api/contacts", {
+  const res = await fetch("/api/contacts", {
    cache: "no-store"
   })
 

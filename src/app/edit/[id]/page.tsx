@@ -3,7 +3,7 @@ import EditContact from "@/components/edit-contact"
 
 async function getContactById(id: string) {
  try {
-  const res = await fetch(`http://localhost:3000/api/contacts/${id}`, {
+  const res = await fetch(`/api/contacts/${id}`, {
    cache: "no-store"
   })
 
