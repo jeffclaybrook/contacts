@@ -3,6 +3,7 @@ import { Host_Grotesk } from "next/font/google"
 import { ReactNode } from "react"
 import Main from "@/components/main"
 import Navbar from "@/components/navbar"
+import ThemeProvider from "@/components/theme-provider"
 import "./globals.css"
 
 const hostGrotesk = Host_Grotesk({
@@ -21,11 +22,18 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${hostGrotesk.variable} antialiased`}>
-        <Navbar />
-        <Main>{children}</Main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <Main>{children}</Main>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

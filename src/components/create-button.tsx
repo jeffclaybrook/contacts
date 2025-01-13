@@ -1,11 +1,14 @@
 import Link from "next/link"
 import { Plus } from "lucide-react"
+import { Button } from "./ui/button"
 
 export default function CreateButton() {
  return (
-  <Link href={"/create"} className="btn btn-primary fixed bottom-8 right-8">
-   <Plus />
-   Create
-  </Link>
+  <Button className="fixed bottom-8 right-8" asChild>
+   <Link href={"/create"}>
+    <Plus />
+    Create
+   </Link>
+  </Button>
  )
 }

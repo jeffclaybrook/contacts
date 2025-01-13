@@ -6,6 +6,6 @@ interface MainProps {
 
 export default function Main({ children }: MainProps) {
  return (
-  <main className="mt-8 p-4 lg:px-8">{children}</main>
+  <main className="p-4 lg:px-8">{children}</main>
  )
 }

@@ -3,7 +3,7 @@ import EditContact from "@/components/edit-contact"
 
 async function getContactById(id: string) {
  try {
-  const res = await fetch(`https://contacts-eosin-two.vercel.app/api/contacts/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/contacts/${id}`, {
    cache: "no-store"
   })
 
@@ -23,14 +23,11 @@ export default async function Edit({ params }: { params: any }) {
  const { name, email, phone } = contact
 
  return (
-  <>
-   <h1 className="text-2xl text-center mb-8">Edit contact</h1>
-   <EditContact
-    id={id}
-    name={name}
-    email={email}
-    phone={phone}
-   />
-  </>
+  <EditContact
+   id={id}
+   name={name}
+   email={email}
+   phone={phone}
+  />
  )
 }
