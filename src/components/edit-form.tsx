@@ -143,7 +143,7 @@ export default function EditForm({ contact, onClose, onUpdate, onDelete }: {
      value={form.jobTitle || ""}
      onChange={handleChange}
     />
-    <div className="flex items-center justify-end gap-4">
+    <div className="flex items-center justify-end gap-4 pb-16">
      <AlertDialog>
       <AlertDialogTrigger asChild>
        <Button

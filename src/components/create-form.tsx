@@ -135,7 +135,7 @@ export default function CreateForm({ onSuccess, onContactCreated }: {
      value={form.jobTitle}
      onChange={handleChange}
     />
-    <div className="flex items-center justify-end gap-4">
+    <div className="flex items-center justify-end gap-4 pb-16">
      <SheetClose asChild>
       <Button type="button" variant="cancel" size="cancel">Cancel</Button>
      </SheetClose>
