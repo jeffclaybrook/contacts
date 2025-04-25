@@ -59,7 +59,7 @@ export default function Wrapper({ contacts: initialContacts }: { contacts: Conta
     <span className="hidden lg:flex">Create</span>
    </Button>
    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-    <SheetContent side="bottom" className="h-[80vh] rounded-t-xl overflow-y-auto bg-[#f6fafe]">
+    <SheetContent side="bottom" className="h-[90dvh] overflow-y-auto flex flex-col rounded-t-xl bg-[#f6fafe]">
      {selectedContact ? (
       <EditForm
        contact={selectedContact}

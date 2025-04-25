@@ -16,7 +16,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         fab: "fixed bottom-6 right-6 inline-flex items-center gap-1 font-normal text-md bg-[#c1e8ff] text-[#001e2b] rounded-xl shadow-lg hover:bg-[#c2e7ff] hover:shadow-xl transition",
         cancel: "text-gray-500 transition hover:text-gray-700",
-        save: "bg-[#176684] text-white",
+        save: "bg-[#176684] text-white disabled:opacity-50 disabled:cursor-not-allowed",
         delete: "inline-flex items-center gap-1 text-red-500 hover:text-red-700"
       },
       size: {

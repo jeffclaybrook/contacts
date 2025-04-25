@@ -1,6 +1,6 @@
 "use client"
 
-import { ChangeEvent, FormEvent, useState } from "react"
+import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { useFormStatus } from "react-dom"
 import { toast } from "sonner"
 import type { Contact } from "@/types/contact"
@@ -22,6 +22,14 @@ export default function EditForm({ contact, onClose, onUpdate, onDelete }: {
 }) {
  const [form, setForm] = useState({ ...contact })
  const { pending } = useFormStatus()
+
+ useEffect(() => {
+  if (typeof window !== "undefined") {
+   setTimeout(() => {
+    (document.activeElement as HTMLElement)?.blur()
+   }, 0)
+  }
+ }, [])
 
  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
   setForm({ ...form, [e.target.name]: e.target.value })
@@ -161,7 +169,7 @@ export default function EditForm({ contact, onClose, onUpdate, onDelete }: {
        </AlertDialogFooter>
       </AlertDialogContent>
      </AlertDialog>
-     <Button type="submit" variant="save" size="save">{pending ? "Updating..." : "Update"}</Button>
+     <Button type="submit" variant="save" size="save" disabled={pending}>{pending ? "Updating..." : "Update"}</Button>
     </div>
    </form>
   </div>

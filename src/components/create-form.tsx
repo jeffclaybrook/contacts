@@ -1,6 +1,6 @@
 "use client"
 
-import { ChangeEvent, FormEvent, useState } from "react"
+import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { useFormStatus } from "react-dom"
 import { formatPhoneInput } from "@/lib/format-phone"
 import { STATE_DATA, updateState, cleanAddress } from "@/lib/clean-address"
@@ -26,6 +26,14 @@ export default function CreateForm({ onSuccess, onContactCreated }: {
  })
  
  const { pending } = useFormStatus()
+
+ useEffect(() => {
+  if (typeof window !== "undefined") {
+   setTimeout(() => {
+    (document.activeElement as HTMLElement)?.blur()
+   }, 0)
+  }
+ }, [])
 
  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
   setForm({ ...form, [e.target.name]: e.target.value })
@@ -131,7 +139,7 @@ export default function CreateForm({ onSuccess, onContactCreated }: {
      <SheetClose asChild>
       <Button type="button" variant="cancel" size="cancel">Cancel</Button>
      </SheetClose>
-     <Button type="submit" variant="save" size="save">{pending ? "Saving..." : "Save"}</Button>
+     <Button type="submit" variant="save" size="save" disabled={pending}>{pending ? "Saving..." : "Save"}</Button>
     </div>
    </form>
   </div>
