@@ -68,7 +68,7 @@ export default function EditForm({ contact, onClose, onUpdate, onDelete }: {
  }
 
  return (
-  <div className="max-w-md w-full mx-auto py-8">
+  <div className="max-w-md w-full mx-auto py-8 px-4">
    <Avatar className="w-20 h-20 mx-auto mb-6">
     <AvatarFallback className="text-white text-2xl" style={{ backgroundColor: contact.avatarColor }}>{getInitial(contact.firstName)}</AvatarFallback>
    </Avatar>

@@ -31,7 +31,7 @@ export default function ContactsList({ contacts, onContactClick }: ContactsListP
        </div>
        <h3 className="hidden md:block flex-1">{contact.phone}</h3>
        <h3 className="hidden lg:block flex-1">{contact.email}</h3>
-       <h3 className="hidden lg:block flex-1 truncate-1-line">{contact.address}</h3>
+       <h3 className="hidden lg:block flex-1">{contact.address}</h3>
       </li>
      ))}
     </ul>

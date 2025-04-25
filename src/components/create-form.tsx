@@ -63,7 +63,7 @@ export default function CreateForm({ onSuccess, onContactCreated }: {
  }
 
  return (
-  <div className="max-w-md w-full mx-auto py-8">
+  <div className="max-w-md w-full mx-auto py-8 px-4">
    <h2 className="text-2xl text-center mb-6">Create Contact</h2>
    <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full">
     <Input

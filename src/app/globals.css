@@ -118,13 +118,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-.truncate-1-line {
-  overflow: hidden;
-  white-space: normal;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  word-break: break-word;
-}

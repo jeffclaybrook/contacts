@@ -11,9 +11,7 @@ export default async function Contacts() {
   return redirect("/sign-in")
  }
 
- const contacts = await prisma.contact.findMany({
-  orderBy: { firstName: "asc" }
- })
+ const contacts = await prisma.contact.findMany()
 
  const decrypted = contacts.map((contact) => ({
   ...contact,
@@ -26,9 +24,11 @@ export default async function Contacts() {
   jobTitle: contact.jobTitle ? decrypt(contact.jobTitle) : null
  }))
 
+ const sorted = decrypted.sort((a, b) => a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase()))
+
  return (
   <>
-   <Wrapper contacts={decrypted} />
+   <Wrapper contacts={sorted} />
   </>
  )
 }
